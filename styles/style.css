@@ -218,9 +218,6 @@
 .card__icon-button {
   border: none;
   background-color: transparent;
-}
-
-.card__icon-button {
   outline: none;
 }
 
