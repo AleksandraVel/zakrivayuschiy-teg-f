@@ -17,4 +17,350 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: var(--background__page);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  text-align: center;
+  align-items: center;
+  min-height: 366px;
+  width: clamp(375px, 50%, 700px);
+  background-color: var(--background__content-color);
+  font-family: var(--font-headline);
+  text-transform: uppercase;
+  color: var(--font-color);
+  border: 2px solid var(--border-color);
+  margin: 100px 0;
+  padding-bottom: 23px;
+  gap: 22px;
+}
+
+.header-titel {
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem); /* 49px-65px*/
+}
+
+.header-text {
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem); /* 14px-23px*/
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 20px;
+  gap: 10px;
+}
+
+.theme-menu__button {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: 14px;
+  transform: 0.3s;
+}
+
+.theme-menu__button::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 90%;
+  height: 1px;
+  background-color: var(--font-color);
+  transform-origin: left;
+  scale: 0;
+  transition: 0.3s;
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
+  transition: opacity 0.3s;
+  cursor: pointer;
+  border: none;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+}
+
+.theme-menu__button:focus-visible::after {
+  scale: 1;
+}
+
+/* стрелочка */
+.theme-menu__button:disabled {
+  opacity: 0.6;
+}
+
+.theme-menu__button:disabled::before {
+  position: absolute;
+  content: "▶";
+  margin-inline-start: -20px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: clamp(375px, 50%, 700px);
+  margin-bottom: 50px;
+}
+
+.main__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--background__content-color);
+  font-family: var(--font-text);
+  color: var(--font-color);
+  border: 2px solid var(--border-color);
+}
+
+.main__block-titel {
+  font-size: 18px;
+  padding: 6px 10px;
+}
+
+.main__content-images {
+  position: relative;
+}
+
+@supports ((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
+  .watermark {
+    -webkit-text-stroke: 1px var(--watermark-color);
+    text-stroke: 1px var(--watermark-color);
+    text-shadow: none;
+  }
+}
+
+.watermark {
+  position: absolute;
+  inset-inline-end: 25px;
+  inset-block-start: 25px;
+  font-family: var(--font-headline);
+  color: var(--font-color);
+  font-size: 14px;
+  -webkit-text-stroke: 1px var(--watermark-color);
+  text-stroke: 1px var(--backgroun--watermark-color);
+  mix-blend-mode: screen;
+  z-index: 1;
+  opacity: 70%;
+}
+
+.content-images {
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.grey__filter {
+  filter: grayscale(70%) contrast(90%);
+}
+
+.brightness__filter {
+  filter: brightness(100%) saturate(350%);
+}
+
+.hue-rotate__filter {
+  filter: hue-rotate(30deg);
+}
+
+.invert__filter {
+  filter: invert(100%) contrast(60%);
+}
+
+.sepia__filter {
+  filter: sepia(90%);
+}
+
+.blur__filter {
+  filter: blur(10px);
+}
+
+.rose__filter {
+  filter: invert(15%) hue-rotate(80deg) brightness(175%) contrast(70%) blur(1.5px);
+}
+
+.main__content {
+  padding: 24px 27px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.main__content:last-child {
+  align-items: end;
+  justify-content: end;
+}
+
+.main__content-text {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  font-size: 18px;
+}
+
+.main__content-buttons {
+  display: flex;
+  max-height: 38px;
+}
+
+.card__icon-button {
+  border: none;
+  background-color: transparent;
+}
+
+.card__icon-button {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 1.5px solid var(--border-color);
+}
+
+.card__like-button {
+  position: relative;
+  padding: 10px 35px;
+  border: 1.5px solid var(--border-color);
+  background-color: transparent;
+  transition: 0.5s ease-in-out;
+}
+
+.hidder__button-text::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: var(--hidder__button-color);
+  transform-origin: left;
+  transition: 0.5s ease-in-out;
+  transform: scaleX(0);
+}
+
+.hidder__button-text:hover::after {
+  transform: scaleX(1);
+}
+
+.main__content-button:hover {
+  cursor: pointer;
+}
+
+.main__content-button:focus {
+  outline: none;
+}
+
+.main__content-button:focus-visible {
+  box-shadow: 3px 3px var(--font-color);
+}
+
+.button__text {
+  font-family: var(--font-headline);
+  font-size: 14px;
+  color: var(--button-text-color);
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
+}
+
+.footer {
+  margin-bottom: 50px;
+}
+
+.footer-button {
+  font-family: var(--font-headline);
+  font-size: 14px;
+  color: var(--font-color);
+  padding: 15px 15px 20px 16px;
+  border: 1.5px solid var(--border-color);
+  background-color: var(--background__content-color);
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
+}
+
+.icon__floppy {
+  position: relative;
+  z-index: 1;
+  color: var(--button-text-color);
+  mix-blend-mode: difference;
+}
+
+.dialog {
+  background-color: var(--background__content-color);
+  border: 1.5px solid var(--border-color);
+}
+
+.dialog[open] {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-self: center;
+  inline-size: 353px;
+  padding: 25px;
+  gap: 30px;
+}
+
+.dialog__content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.dialog__content-text {
+  font-family: var(--font-headline);
+  font-size: 14px;
+  color: var(--font-color);
+  text-transform: uppercase;
+  line-height: 20px;
+}
+
+.dialog__content-button {
+  position: relative;
+  font-family: var(--font-headline);
+  font-size: 14px;
+  color: var(--font-color);
+  border: 1.5px solid var(--border-color);
+  padding: 10px;
+}
+
+.dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.728);
+}
+
+@media (width <= 375px) {
+  .page {
+    margin: 0;
+  }
+
+  .header {
+    min-height: 327px;
+  }
+
+  .main__content {
+    padding: 24px 28px;
+  }
+
+  .main__content-mobil {
+    padding: 24px 27px;
+  }
+
+  .footer-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
 }

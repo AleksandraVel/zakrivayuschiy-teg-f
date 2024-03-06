@@ -12,3 +12,81 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+.theme-menu__button:disabled::before {
+    animation-name: "arrow";
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes arrow {
+    from {
+      margin-inline-start: -30px;
+    }
+    to {
+      margin-inline-start: -20px;
+    }
+  }
+  
+  .contur {
+    fill: var(--heart__sparks-color);
+    transition: fill 0.3 linear 0.06s;
+  }
+  
+  .main-body {
+    fill: transparent;
+    transition: fill 0.3s linear;
+  }
+  
+  .like-icone:hover .main-body {
+    fill: var(--heart__contour-color);
+    transition: fill 0.3s 0.05s linear;
+  }
+  
+  .like-icone:active .main-body {
+    fill: var(--heart__sparks-color);
+    transition: fill 0.3s linear;
+  }
+  
+  .core {
+    fill: transparent;
+    transition: fill 0.3s 0.05s linear;
+  }
+  
+  .like-icone:hover .core {
+    fill: var(--heart__contour-color);
+    transition: fill 0.3s linear;
+  }
+  
+  .like-icone:active .core {
+    fill: var(--heart__sparks-color);
+    transition: fill 0.3s linear;
+  }
+  
+  .like-icone.is-liked .sparks {
+    transform-origin: center;
+    animation: sparks 0.3 ease-in 0.3s alternate;
+  }
+  
+  @keyframes sparks {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .like-icone.is-liked .heart {
+    animation: heart 0.3 ease-in 0.3s alternate;
+  }
+  
+  @keyframes heart {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.5);
+    }
+  }  
