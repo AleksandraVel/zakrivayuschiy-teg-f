@@ -331,6 +331,8 @@
   color: var(--font-color);
   border: 1.5px solid var(--border-color);
   padding: 10px;
+  outline: none;
+  background-color: transparent;
 }
 
 .dialog::backdrop {
