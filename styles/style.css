@@ -26,6 +26,7 @@
   background-size: cover;
   background-attachment: fixed;
   font-variation-settings: "wght" var(--font-weight);
+  margin-bottom: 50px;
 }
 
 .header {
@@ -163,7 +164,7 @@
 
 .content-images {
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .grey__filter {
