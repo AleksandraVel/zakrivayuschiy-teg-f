@@ -26,7 +26,6 @@
   background-size: cover;
   background-attachment: fixed;
   font-variation-settings: "wght" var(--font-weight);
-  margin-bottom: 50px;
 }
 
 .header {
@@ -298,6 +297,7 @@
   margin-right: 10px;
   width: clamp(19.125rem, 18.487rem + 2.723vw, 20.938rem);
   margin-left: 8px;
+  margin-bottom: 100px;
 }
 
 .footer-button {

@@ -98,7 +98,7 @@
 }
 
 .like-icon.is-liked .heart {
-  animation: sparks 0.3 ease-in 0.3s alternate;
+  animation: heart 0.3 ease-in 0.3s alternate;
   transform-origin: center;
 }
 
