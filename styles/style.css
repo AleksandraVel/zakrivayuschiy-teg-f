@@ -48,7 +48,6 @@
 
 .header-titel {
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem); /* 49px-65px*/
-  padding-right: 10px;
 }
 
 .header-text {
@@ -296,15 +295,19 @@
   justify-content: center;
   margin-right: 10px;
   width: clamp(19.125rem, 18.487rem + 2.723vw, 20.938rem);
-  margin-left: 8px;
+  margin-left: 10px;
   margin-bottom: 100px;
 }
 
 .footer-button {
-  padding: 13px 0 20px 0px;
+  padding: 15px 20px;
   border: 1.5px solid var(--border-color);
   background-color: var(--background__content-color);
-  width: 100%;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 8px;
 }
 
 .icon__floppy {
@@ -326,8 +329,8 @@
   flex-direction: column;
   justify-self: center;
   align-self: center;
-  inline-size: 353px;
-  padding: 25px;
+  inline-size: clamp(21.313rem, 20.96rem + 1.502vw, 22.313rem);
+  padding: 30px 40px;
   gap: 30px;
 }
 
@@ -340,7 +343,7 @@
 .dialog__content-text {
   font-family: var(--font-headline);
   font-size: 14px;
-  width: clamp(12.375rem, 11.583rem + 3.38vw, 14.625rem);
+  width: 100%;
   color: var(--font-color);
   text-transform: uppercase;
   line-height: 20px;
@@ -349,6 +352,7 @@
 .dialog__icon {
   width: 39px;
   height: 39px;
+  flex-shrink: 0;
 }
 
 .dialog__content-button {
@@ -388,20 +392,26 @@
     padding: 0;
   }
 
+  .watermark {
+    inset-inline-end: 10px;
+    inset-block-start: 22px;
+  }
+
   .main__content-mobil {
     padding: 24px 28px;
   }
 
   .footer-button {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    padding: 20px 0 15px 0;
   }
 
   .icon__floppy {
     width: 28px;
     height: 28px;
+  }
+
+  .dialog__icon {
+    width: 39px;
+    height: 39px;
   }
 }
