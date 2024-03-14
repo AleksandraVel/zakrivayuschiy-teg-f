@@ -151,7 +151,8 @@
   mix-blend-mode: hard-light;
   z-index: 1;
   opacity: 50%;
-  text-shadow: 1px var(--watermark-color);
+  text-shadow: -1px -1px 0 var(--watermark-color), 1px -1px 0 var(--watermark-color),
+    -1px 1px 0 var(--watermark-color), 1px 1px 0 var(--watermark-color);
 }
 
 @supports ((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
