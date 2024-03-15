@@ -38,20 +38,23 @@
   width: clamp(375px, 50%, 700px);
   background-color: var(--background__content-color);
   font-family: var(--font-headline);
+  font-weight: var(--font-weight);
   text-transform: uppercase;
   color: var(--font-color);
   border: 2px solid var(--border-color);
-  margin: 100px 0;
-  padding-bottom: 24px;
+  margin: 101px 0;
+  padding-bottom: 25px;
   gap: 22px;
 }
 
 .header-titel {
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem); /* 49px-65px*/
+  line-height: 1;
 }
 
 .header-text {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem); /* 14px-23px*/
+  line-height: 1;
 }
 
 .theme-menu__list {
@@ -68,6 +71,7 @@
   background-color: transparent;
   text-transform: uppercase;
   font-size: 14px;
+  line-height: 1;
   transition: opacity 0.3s;
 }
 
@@ -114,7 +118,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 52px;
   width: clamp(375px, 50%, 700px);
   margin-bottom: 50px;
 }
@@ -130,8 +134,9 @@
 }
 
 .main__block-titel {
-  font-size: 18px;
-  padding: 7px 12px;
+  font-size: 18.2px;
+  line-height: 21.78px;
+  padding: 4px 9px;
   font-variation-settings: "wght" var(--font-weight-bold);
   border-bottom: 2px solid var(--border-color);
 }
@@ -144,16 +149,16 @@
 .watermark {
   position: absolute;
   inset-inline-end: 25px;
-  inset-block-start: 25px;
+  inset-block-start: 24px;
   font-family: var(--font-headline);
   color: var(--font-color);
   font-size: 14px;
+  line-height: 1;
   mix-blend-mode: hard-light;
   z-index: 1;
   opacity: 50%;
   text-shadow: -1px -1px 0 var(--watermark-color), 1px -1px 0 var(--watermark-color), -1px 1px 0 var(--watermark-color), 1px 1px 0 var(--watermark-color);
 }
-
 
 @supports ((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
   .watermark {
@@ -212,8 +217,10 @@
 .main__content-text {
   display: flex;
   flex-direction: column;
-  gap: 27px;
+  gap: 28.5px;
   font-size: 18px;
+  line-height: 21px;
+  font-weight: var(--font-weight);
 }
 
 .main__content-buttons {
@@ -245,6 +252,7 @@
 .hidder__button-text {
   font-family: var(--font-headline);
   font-size: 14px;
+  line-height: 12.6px;
   color: var(--font-color);
   position: relative;
   background-color: transparent;
@@ -286,6 +294,7 @@
 .button__text {
   font-family: var(--font-headline);
   font-size: 14px;
+  line-height: 12.6px;
   color: var(--button-text-color);
   position: relative;
   z-index: 1;
@@ -331,24 +340,25 @@
   flex-direction: column;
   justify-self: center;
   align-self: center;
+  align-items: center;
   inline-size: clamp(21.313rem, 20.96rem + 1.502vw, 22.313rem);
-  padding: 30px 40px;
+  padding: 30px;
   gap: 30px;
 }
 
 .dialog__content {
   display: flex;
   align-items: center;
+  width: clamp(16.063rem, 15.27rem + 3.38vw, 18.313rem);
   gap: 20px;
 }
 
 .dialog__content-text {
   font-family: var(--font-headline);
   font-size: 14px;
-  width: 100%;
+  line-height: 21px;
   color: var(--font-color);
   text-transform: uppercase;
-  line-height: 20px;
 }
 
 .dialog__icon {
@@ -358,7 +368,7 @@
 }
 
 .dialog__content-button {
-  width: 100%;
+  width: clamp(16.063rem, 15.27rem + 3.38vw, 18.313rem);
   height: 38px;
   outline: none;
 }
@@ -378,15 +388,16 @@
   }
 
   .main {
-    gap: 50.5px;
+    gap: 50.7px;
+    margin-bottom: 54px;
   }
 
   .main__content {
-    padding: 25px 27px;
+    padding: 24px 27px;
   }
 
-  .main__block-titel {
-    padding: 5px 10px;
+  .main__content-mobil {
+    padding: 25px 28px;
   }
 
   .main__content-images {
@@ -397,10 +408,6 @@
   .watermark {
     inset-inline-end: 10px;
     inset-block-start: 22px;
-  }
-
-  .main__content-mobil {
-    padding: 24px 28px;
   }
 
   .footer-button {
