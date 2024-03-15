@@ -16,6 +16,7 @@
   --hidder__button-color: #000;
   --watermark-color: rgb(255, 255, 255);
   --heart__contour-color: #000;
+  --padding-right: 0;
 }
 
 :root.theme-dark {
@@ -29,6 +30,7 @@
   --hidder__button-color: rgba(0, 204, 20, 1);
   --watermark-color: rgb(0, 0, 0);
   --heart__contour-color: rgb(0, 204, 20);
+  --padding-right: 4px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -43,5 +45,6 @@
     --hidder__button-color: rgba(0, 204, 20, 1);
     --watermark-color: rgb(0, 0, 0);
     --heart__contour-color: rgb(0, 204, 20);
+    --padding-right: 4px;
   }
 }

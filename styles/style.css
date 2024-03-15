@@ -202,7 +202,7 @@
 }
 
 .main__content {
-  padding: 24px 27px;
+  padding: 24px 25px;
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -388,16 +388,8 @@
   }
 
   .main {
-    gap: 50.7px;
-    margin-bottom: 54px;
-  }
-
-  .main__content {
-    padding: 24px 27px;
-  }
-
-  .main__content-mobil {
-    padding: 25px 28px;
+    gap: 51.5px;
+    margin-bottom: 52px;
   }
 
   .main__content-images {
@@ -408,6 +400,10 @@
   .watermark {
     inset-inline-end: 10px;
     inset-block-start: 22px;
+  }
+
+  .main__content-text {
+    padding-right: var(--padding-right);
   }
 
   .footer-button {
